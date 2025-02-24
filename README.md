@@ -89,3 +89,30 @@ Desde la raíz del repositorio (mi-carpeta), instala el paquete:
    );
 
 Configura las claves en el Backend para que se conecte correctamente con SUPABASE.
+
+## Estructuración de Componentes
+Organizamos la aplicación en partes pequeñas y reutilizables. Por ejemplo, tenemos componentes para mostrar tarjetas de agentes y clientes, una lista para cada uno y un componente de filtro. La estructura se dividió en carpetas:
+
+ components/ para la UI,
+ 
+ contexts/ para el manejo global del estado,
+ 
+ hooks/ para encapsular lógica reutilizable,
+ 
+ services/ para la conexión con la API RESTful.
+ 
+ Manejo del Estado y Actualizaciones en Tiempo Real
+ 
+ Utilizamos la Context API y hooks personalizados (como useAgents y useClients) para mantener el estado de agentes y clientes. Además, configuramos un WebSocket que escucha cambios en tiempo real (por ejemplo, cuando un agente cambia de estado) y actualiza inmediatamente la UI.
+
+## Renderizado y Diferencias entre MPA y SPA
+
+Server-Side Rendering (SSR): Algunas partes se renderizan en el servidor, lo que mejora el SEO y la carga inicial.
+
+Client-Side Rendering (CSR): Los componentes interactivos se renderizan en el cliente para brindar una experiencia fluida.
+
+SPA vs. MPA: Una SPA carga todo en una sola página y ofrece transiciones muy rápidas, mientras que una MPA recarga la página en cada navegación. Next.js nos permite combinar ambos enfoques, aprovechando lo mejor de cada uno.
+
+Conexión con el Backend (API RESTful)
+
+La conexión se realiza mediante llamadas a la API usando la Fetch API. Cada solicitud valida la respuesta y, en caso de error, se maneja de forma adecuada. Esto asegura que el frontend esté siempre sincronizado con el backend, mostrando datos actualizados desde el inicio y a través de WebSockets.
