@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "yIyjr0dy9gF0wSjsEaHwOcH90iQEmhlQm6LFYuEZmmk=",
+  "Source": "ContactCenterBackend",
+  "BasePath": "_content/ContactCenterBackend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

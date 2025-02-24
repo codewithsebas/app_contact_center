@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start:both": "concurrently \"dotnet run --project ./ContactCenterBackend/ContactCenterBackend.csproj\" \"npm run dev --prefix ./contact-center-app\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
